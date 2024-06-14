@@ -1,6 +1,6 @@
 ---
-- name: Deploy application Geo citizen
-  hosts: all
+- name: Update and install packages on GCP instances
+  hosts: gcp_instances
   become: yes
   tasks:
     - name: Update apt packages
@@ -15,3 +15,4 @@
           - tomcat9
         state: present
         update_cache: yes
+
